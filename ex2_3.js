@@ -6,7 +6,7 @@ function circleArea(radius) {
     if (radius < 0) 
         return -1;
 
-    let area = Math.PI * 2 * radius * radius;
+    let area = Math.PI * radius * radius;
 
     return area.toFixed(2);
     
