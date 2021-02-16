@@ -1,4 +1,4 @@
-// ex9.1 - Ayelet Danieli - Objects
+// ex9.1 - Ayelet Danieli - Callbacks
 
 // 1. Write a a function called ‘isString’ that receives 2
 // arguments, a string and a callback function.
