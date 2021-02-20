@@ -6,14 +6,16 @@
 // isIsogram("Dermatoglyphics") == true
 // isIsogram("aba") == false
 // isIsogram("moOse") == false // -- ignore letter case
-console.log("*** ex 6.4 ***");
+console.log("*** ex 6.4 - Isogram ***");
 let isIsogram = (str) => {
-    for (let i=0; i < str.length; i++) 
-        if (str.indexOf(str[i]) !== i) 
-            return false;
+    let str1 = str.toLowerCase();
+    for (let i=0; i < str1.length; i++) {
+        if (str1.toLowerCase().indexOf(str1[i]) !== i) 
+        return false;
+    }
     return true;
 };
 console.log(isIsogram("Dermatoglyphics"));// == true
 console.log(isIsogram("aba"));// == false
 console.log(isIsogram("moOse"));// == false // -- ignore letter case
-//TODO - fix this
+console.log(isIsogram("abcdef"));// == true

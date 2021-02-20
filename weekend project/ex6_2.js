@@ -12,42 +12,40 @@
 // "aA11" -> 2 # 'a' and '1'
 // "ABBA" -> 2 # 'A' and 'B' each occur twice
 
-console.log("*** ex 6.2 ***");
-// const vowelCount = (str) => {
-//     let vowels = [];
-//     let chars = str.toLowerCase().split("");
-//     chars.forEach((c) => {
-//       if (isVowel(c)) {
-//         if (c in vowels) vowels[c]++;
-//         else vowels[c] = 1;
-//       }
-//     });
-
-//     return vowels;
-//   };
-
-let countDuplicates = (str) => {
-  let map = [];
-  for (let c of str) {
-    console.log(c);
-    if (c in map) map.c += 1;
-    //map.push({ `${c}`: 1});
-    else map.c = 1;
+// stringify map
+let displayDuplicates = (map) => {
+  let mapStr = "";
+  let len = Object.keys(map).length;
+  if (len == 0) mapStr = " 0 # no characters repeat more than once";
+  else {
+    mapStr += len + " #: ";
+    for (key in map) {
+      mapStr += key + ' occurs '+ map[key] + ' times '
+    }
   }
-  console.log(map);
+  console.log(mapStr);
 };
-//TODO
+
+console.log("*** ex 6.2  Count Duplicates ***");
+let countDuplicates = (str) => {
+  let map = new Object();
+  for (c of str.toLowerCase()) {
+    c in map ? map[c]++ : (map[c] = 1);
+  }
+  for (key in map) {
+    if (map[key] < 2) {
+      delete map[key];
+    }
+  }
+  displayDuplicates(map);
+};
+
+
 
 // countDuplicates("abcde");// -> 0 # no characters repeats more than once
-countDuplicates("aabbcde"); //-> 2 # 'a' and 'b'
-// countDuplicates("aabBcde");// -> 2 # 'a' occurs twice and 'b' twice (`b` and `B`)
-// countDuplicates("indivisibility");// -> 1 # 'i' occurs six times
-// countDuplicates("Indivisibilities");// -> 2 # 'i' occurs seven times and 's' occurs twice
-// countDuplicates("aA11");// -> 2 # 'a' and '1'
-// countDuplicates("ABBA");// -> 2 # 'A' and 'B' each occur twice
-
-
-
-
-
-
+countDuplicates("aabBcde"); //-> 2 # 'a' and 'b'
+countDuplicates("aabBcde");// -> 2 # 'a' occurs twice and 'b' twice (`b` and `B`)
+countDuplicates("indivisibility");// -> 1 # 'i' occurs six times
+countDuplicates("Indivisibilities");// -> 2 # 'i' occurs seven times and 's' occurs twice
+countDuplicates("aA11");// -> 2 # 'a' and '1'
+countDuplicates("ABBA");// -> 2 # 'A' and 'B' each occur twice

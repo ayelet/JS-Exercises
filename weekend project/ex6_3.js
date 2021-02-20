@@ -9,18 +9,15 @@
 // longest(a, b) -> "abcdefklmopqwxy"
 // a = "abcdefghijklmnopqrstuvwxyz"
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
-console.log("*** ex 6.3 ***");
+console.log("*** ex 6.3 - Organize strings***");
 let longest = (str1, str2) => {
-  // let arr = (str1+str2).split('');// + str2.split('');
-  let uniStr = str1 + str2;
-  let arr1 = uniStr.split("").sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0));
-  let arr2 = arr1.filter((a, i) => arr1.indexOf(a) === i);
-  console.log(arr2.join(""));
-  // console.log([...uniStr].filter(a => a.indexOf(a) ===i));
+  let organizedStr = Array.from(new Set([...str1+str2])).sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0)).join('');
+  console.log(organizedStr);
 };
 
 let a = "xyaabbbccccdefww";
 let b = "xxxxyyyyabklmopq";
-// let b = "aabc";
-// let a = "def";
 longest(a, b); // -> "abcdefklmopqwxy"
+let a1 = "deefag";
+let b1 = "aabc";
+longest(a1, b1); // -> "abcdefg"

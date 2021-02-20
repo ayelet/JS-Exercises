@@ -14,8 +14,8 @@
 console.log("*** ex 3.2 - People on bus ***");
 
 let numPeopleOnBus = (arr) =>
-  arr.map((a) => a[0] - a[1]).reduce((a, b) => a + b);
-
+  // arr.map((a) => a[0] - a[1]).reduce((a, b) => a + b);
+  arr.reduce((sum, [b_in, b_out]) => {return sum + b_in - b_out});
 console.log(
   numPeopleOnBus([
     [10, 0],

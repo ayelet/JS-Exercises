@@ -7,6 +7,7 @@
 // basicOp('-', 15, 18) // Output: -3
 // basicOp('*', 5, 5) // Output: 25
 // basicOp('/', 49, 7) // Output: 7
+
 console.log("*** ex 2.7 - Math operation ***");
 
 let basicOp = (op, a, b) => {
