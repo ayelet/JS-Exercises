@@ -6,7 +6,7 @@ let btn = document.querySelector(".btn");
 // input validation
 function validateInputFromUser() {
     let number = num.value;
-    if (Number.isNaN(Number(number))) {
+    if (Number.isNaN(Number(number) || number < 0)) {
         return false;
     }
     return true;
