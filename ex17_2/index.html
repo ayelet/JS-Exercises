@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Area</title>
+    <style>
+        .form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+            padding: 30px;
+        }
+        .form * {
+            margin: 5px 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Application form</h1>
+    <form class="form">
+        <label for="name">Name</label>
+        <input type="text" class="name">
+        <label for="email">Email</label>
+        <input type="email" class="email">
+        <label for="textarea">Why are you interested in this position?</label>
+        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+        <input type="submit">
+        <label  class="alert" for="submit"></label>
+        <script src='./index.js'></script>
+    </form>
+</body>
+
+</html>
