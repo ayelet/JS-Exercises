@@ -18,7 +18,7 @@ inputBox[0].addEventListener("paste", (event) => {
   let paste = (event.clipboardData || window.clipboardData).getData("text");
   console.log(paste);
   inputBox.forEach((element, i) => {
-    element.value = "";
+    // element.value = "";
     element.value = paste[i] || "";
   });
 });
