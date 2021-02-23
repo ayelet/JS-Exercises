@@ -1,0 +1,73 @@
+<!-- Ex19.2 - Ayelet Danieli - copy multiple inputs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Code</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .btn {
+            display: block;
+            margin: auto;
+            height: 2em;
+            width: 100px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;;
+        }
+
+        .formWrapper {
+            width: 400px;
+            height: 200px;
+            border: 3px solid slateblue;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .alert {
+            display: block;
+            display: none;
+            margin-top: 1.4rem;
+        }
+        .verify {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 20px;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Text to copy:</h1>
+        <h2>876543</h2>
+        <div class="formWrapper">
+            <form action="">
+                <input class='verify' type="text">
+                <input class='verify' type="text">
+                <input class='verify' type="text">
+                <input class='verify' type="text">
+                <input class='verify' type="text">
+                <input class='verify' type="text">
+                <input class='btn' type="button" value="verify">
+                <label class='alert' for="btn">#</label>
+            </form>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
