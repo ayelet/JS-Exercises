@@ -29,7 +29,5 @@ myDiv.appendChild(myHeader1);
 myDiv.appendChild(myHeader2);
 myDiv.appendChild(myImg);
 myDiv.appendChild(myList);
-// myDiv.appendchild(myList);
-
 
 document.body.appendChild(myDiv);
