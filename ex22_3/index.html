@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the letter</title>
+    <style>
+        .container {
+            margin: auto;
+            text-align: center;
+
+        }
+        .guess {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            background: url('./img/question\ \(1\).png') no-repeat  center center/cover;
+            background-color: #0009;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Guess the letter</h1>
+        <input type="text" class="guess" maxlength="1">
+        <p class="msg"></p>
+        <h2>Keys guessed</h2>
+        <p class="keysGuessed"></p>
+        <script src="./index.js"></script>
+    </div>
+</body>
+
+</html>
