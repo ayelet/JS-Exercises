@@ -11,6 +11,12 @@ let btn = document.querySelector('.btn');
 let modal = document.querySelector('.modal')
 btn.addEventListener('click', () => {
     // add event here
+    let user_info = document.querySelector('.user-info');
+    let name = document.querySelector('#name').value;
+    let age = document.querySelector('#age').value;
+    let email = document.querySelector('#email').value;
+
+    user_info.innerHTML = `name: ${name}, age: ${age}, email: ${email}`;
     modal.style.display = "block";
 })
 
@@ -19,10 +25,29 @@ let span = document.querySelector('span');
 span.onclick = function() {
     modal.style.display = "none";
   }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+
+  function cleanInputFields() {
+     let name = document.querySelector('#name');
+     let age = document.querySelector('#age');
+     let email = document.querySelector('#email');
+
+     name.value = ""
+     age.value = "";
+     email.value = "";
     }
-  }
+  let cancel = document.querySelector('.cancel');
+  
+  cancel.addEventListener('click', ()=> {
+      console.log(cancel);
+      modal.style.display = "none";
+      cleanInputFields();
+  })
+  
+  let confirm = document.querySelector('.confirm');
+  confirm.addEventListener('click', ()=>{
+      modal.style.display = "none";
+      let form = document.querySelector('.myForm');
+      let p1 = document.createElement('p');
+      p1.innerHTML = "Congratulation! You have successfully sent this form!";
+      form.appendChild(p1);
+  })
