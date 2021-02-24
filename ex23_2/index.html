@@ -1,0 +1,58 @@
+<!-- ex23.2 - Ayelet Danieli -Stopwatch -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .clock1 {
+            font-size: 48px;
+            color: sandybrown;
+            width: 200px;
+            height: 150px;
+            margin: 30px auto;
+            text-align: center;
+            border: 3px solid skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+        .btn {
+            width: 80px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Stopwatch</h1>
+        <div class="clock1">
+            <span class="clock min">00</span>:
+            <span class="clock sec">00</span>:
+            <span class="clock millisec">00</span>
+        </div>
+        <div class="buttons">
+            <input class='btn start' type="button" value="start">
+            <input class='btn stop' type="button" value="stop">
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
