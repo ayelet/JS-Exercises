@@ -1,0 +1,102 @@
+<!-- ex23.1 - Ayelet Danieli - Ticking clock -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .clock1 {
+            font-size: 48px;
+            color: sandybrown;
+            width: 300px;
+            height: 200px;
+            margin: 100px auto;
+            text-align: center;
+            border: 3px solid skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .clock1 {
+            /* font-size: 24px; */
+            border: 3px solid slateblue;
+            width: 300px;
+            height: 300px;
+        }
+
+        .clock2 {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+
+            width: 300px;
+            height: 300px;
+
+        }
+
+        .clock-body {
+            top: 0;
+            left: 0;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 3px solid salmon;
+            margin: auto;
+        }
+
+        .arm {
+            position: absolute;
+            height: 80px;
+            left: 150px;
+            height: 50%;
+            transform-origin: bottom;
+        }
+
+        .clock-hour {
+            background-color: red;
+            width: 4px;
+        }
+
+        .clock-min {
+            background-color: green;
+            width: 3px;
+        }
+
+        .clock-sec {
+            background-color: blue;
+            width: 1px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock1">
+        <span class="clock hour">00</span>:
+        <span class="clock minute">00</span>:
+        <span class="clock second">00</span>
+    </div>
+    <div class="clock2">
+        <div class="clock-body"></div>
+        <div class="arm clock-hour"></div>
+        <div class="arm clock-min"></div>
+        <div class="arm clock-sec"></div>
+
+
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
