@@ -59,4 +59,5 @@ document.querySelector(".element").addEventListener(() => {
 console.log(this);
 });
 
-// this points the the global scope since an arrow function calls a higher level scope
+// this points the the parent element since an arrow function calls a higher level scope
+// to fix the code: we need to turn the arrow function to a regular function
