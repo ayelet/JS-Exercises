@@ -16,7 +16,6 @@ const hero = {
   health: 5,
   power: 68,
   getStrength: function () {
-    //   console.log("getstrength() func: ", this);
     if (this.health <= 5) {
       return this.power - 10;
     } else return this.power;
