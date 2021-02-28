@@ -11,9 +11,9 @@ function Square(a, b, c, d){
     this.b = b;
     this.c = c;
     this.d = d;
-    this.isSquare= function(){ return ((a===b)&& (b===c) && (c===d));}
    }
 
+   Square.prototype.isSquare = function(){return ((this.a===this.b)&& (this.b===this.c) && (this.c===this.d));}
    let sq1 = new Square(12,12,12,12);
    let sq2 = new Square(1,2,1,2);
    console.log(sq1.isSquare(), sq2.isSquare()); // true, false
