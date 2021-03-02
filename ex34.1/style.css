@@ -1,0 +1,28 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+.wrapper {
+    margin: 50px auto;
+    border: 2px solid black;
+}
+h1 {
+    font-size: 18px;
+    text-align: center;
+}
+table, tr, th, td {
+    border: 3px solid steelblue;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+th {
+    background: steelblue;
+}
+
+tr {
+    background: lavenderblush;
+}
