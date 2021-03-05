@@ -1,0 +1,27 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+.wrapper {
+    margin: auto;
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+}
+.btn {
+    margin: 20px auto;
+    display: block;
+}
+.dog {
+    width: auto;
+    height: auto;
+    max-width: 800px;
+    max-height: 400px;
+}
+h1 {
+    font-size: 18px;
+    text-align: center;
+}
+
+
