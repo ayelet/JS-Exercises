@@ -65,7 +65,7 @@ class PointWorld {
   removeDoublePoints() {
     this.points.forEach((p) => {
       let filteredPts = this.points.filter((point) => point.isSame(p));
-      if (filtered.length > 1) {
+      if (filteredPts.length > 1) {
         // point is twice or more
         let i = this.points.indexOf(p);
         this.points.splice(i, 1); //remove the current point
@@ -86,4 +86,6 @@ pW.addPoint(new Point(3,4));
 console.log(pW.contains(new Point(3,4)));
 console.log(pW.contains(new Point(4,4)));
 console.log(pW.sumX());
+pW.print();
+pW.removeDoublePoints();
 pW.print();
